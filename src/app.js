@@ -4,7 +4,9 @@ const db = require('./lib/service/db')
 
 const typeDefs = gql(require('./lib/graphql/typeDefs'))
 const resolvers = require('./lib/graphql/resolvers')
+console.log("typeDefstypeDefs",typeDefs);
 
+console.log("definitions:",typeDefs.definitions);
 const app = new Koa();
 const server = new ApolloServer({
     typeDefs,
